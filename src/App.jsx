@@ -1,13 +1,11 @@
-import Header from "./components/Header"
-import Nav from "./components/Nav"
+import Layoutpublic from "./layouts/Layoutpublic"
 
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Nav />
+      <Layoutpublic />
     </>
   )
 }
