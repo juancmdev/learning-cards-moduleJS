@@ -7,6 +7,7 @@ import PersonalPronouns from "../pages/PersonalPronouns";
 export default function Main() {
   return (
     <>
+    <main className="container mx-auto">
       <Routes>
         <Route element={<Home />}>
           <Route path="Home" element={<Home />} />
@@ -21,6 +22,8 @@ export default function Main() {
           <Route path="PersonalPronouns" element={<PersonalPronouns />} />
         </Route>
       </Routes>
+    </main>
+      
     </>
   );
 }
