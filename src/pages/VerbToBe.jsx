@@ -1,5 +1,53 @@
-import React from "react";
+const tobeDb = [
+  {
+    front: "Yo soy",
+    back: "I am",
+    example: "Yo soy estudiante.",
+  },
+  {
+    front: "Tú eres",
+    back: "You are (informal)",
+    example: "Tú eres mi amigo.",
+  },
+  {
+    front: "Él es",
+    back: "He is",
+    example: "Él es médico.",
+  },
+  {
+    front: "Ella es",
+    back: "She is",
+    example: "Ella es profesora.",
+  },
+  {
+    front: "Usted es",
+    back: "You are (formal)",
+    example: "Usted es muy amable.",
+  },
+  {
+    front: "Nosotros somos",
+    back: "We are",
+    example: "Nosotros somos familia.",
+  },
+  {
+    front: "Ellos son",
+    back: "They are (masculine)",
+    example: "Ellos son amigos.",
+  },
+  {
+    front: "Ellas son",
+    back: "They are (feminine)",
+    example: "Ellas son estudiantes.",
+  },
+  {
+    front: "Ustedes son",
+    back: "You all are",
+    example: "Ustedes son muy inteligentes.",
+  }
+]
 
 export default function VerbToBe() {
-  return <div>VerbToBe</div>;
+  return (<>
+    {tobeDb.map((item, index) => item.back)}
+  </>);
 }
