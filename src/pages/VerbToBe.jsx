@@ -61,13 +61,13 @@ export default function VerbToBe() {
   <>    
       <div className="grid grid-cols-3 gap-4 m-4">
         {tobeDb.map((item, index) => (
-          <div className="card w-60 h-60 bg-amber-500 " key={index}>
-            <div className="card-front border-2 border-black h-30 flex items-center justify-center"
+          <div className="card" key={index}>
+            <div className="card-front bg-amber-500 border-2 border-black h-30 flex items-center justify-center"
               onClick={handleFlip}
             >
               <h2 className="text-3xl">{item.front}</h2>
             </div>
-            <div className="card-back flex items-center justify-center border-2 border-black h-30 rotate-y-180">
+            <div className="card-back bg-amber-500 flex items-center justify-center border-2 border-black h-30 rotate-y-180 backface-hidden">
               <h2 className="text-2xl">{item.back}</h2>
             </div>
           </div>
