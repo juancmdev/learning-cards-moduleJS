@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const tobeDb = [
   {
     front: "Yo soy",
@@ -46,21 +48,30 @@ const tobeDb = [
   }
 ]
 
+
 export default function VerbToBe() {
-  return (<>
-    {/*  */}
-      
+
+  const [flipped, setFlipped] = useState(false);
+
+  const handleFlip = () => {
+    console.log("Flipping card");
+  }
+
+  return (
+  <>    
       <div className="grid grid-cols-3 gap-4 m-4">
-        {tobeDb.map(item => (
-          <div className="card w-60 h-60 bg-amber-500 " key={item.front}>
-            <div className="card-front border-2 border-black h-30 flex items-center justify-center">
-              <h2 className="text-3xl">{item.front}</h2>
+        {tobeDb.map((item, index) => (
+          <li className="card w-60 h-60 bg-amber-500 " key={index}>
+            <div className="card-front border-2 border-black h-30 flex items-center justify-center"
+              onClick={handleFlip}
+            >
+              <h2 className="text-3xl">{item.front}-{index}</h2>
             </div>
             <div className="card-back">
               <h2>{item.back}</h2>
               <p>{item.example}</p>
             </div>
-          </div>
+          </li>
         ))}
       </div>
       
