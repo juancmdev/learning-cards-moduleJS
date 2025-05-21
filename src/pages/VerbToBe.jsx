@@ -67,7 +67,7 @@ export default function VerbToBe() {
             >
               <h2 className="text-3xl">{item.front}</h2>
             </div>
-            <div className="card-back bg-amber-500 flex items-center justify-center border-2 border-black h-30 rotate-y-180 backface-hidden">
+            <div className="card-back bg-blue-100 flex items-center justify-center border-2 border-black h-30">
               <h2 className="text-2xl">{item.back}</h2>
             </div>
           </div>
