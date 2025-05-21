@@ -48,15 +48,22 @@ const tobeDb = [
 
 export default function VerbToBe() {
   return (<>
-    {tobeDb.map((item, index) => (<div key={index} className="w-72 h-48 mt-1 bg-amber-500 border-3 border-black-500">
-      <div className="card-front">
-        <h2>{item.front}</h2>
-        <p>{item.example}</p>
+    {/*  */}
+      
+      <div className="grid grid-cols-3 gap-4 m-4">
+        {tobeDb.map(item => (
+          <div className="card w-60 h-60 bg-amber-500 " key={item.front}>
+            <div className="card-front border-2 border-black h-30 flex items-center justify-center">
+              <h2 className="text-3xl">{item.front}</h2>
+            </div>
+            <div className="card-back">
+              <h2>{item.back}</h2>
+              <p>{item.example}</p>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="card-back">
-        <h2>{item.back}</h2>
-        <p>{item.example}</p>
-      </div>
-    </div>))}
+      
+    {/* </div>)} */}
   </>);
 }
